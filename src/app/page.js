@@ -1,103 +1,251 @@
-import Image from "next/image";
+"use client";
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="min-h-screen bg-black text-white">
+      <Header />
+      
+      {/* Hero Section */}
+      <section className="relative h-screen flex items-center">
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src="/images/hero-bg.jpg" 
+            alt="Server room with blue lighting" 
+            fill 
+            priority
+            className="object-cover opacity-40"
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        
+        <div className="container mx-auto px-6 z-10">
+          <motion.div 
+            className="max-w-3xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              AI-Powered DevOps Excellence
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-10">
+              Transform your operations with intelligent automation and expert guidance.
+              Scale confidently while reducing costs and complexity.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link href="/assessment" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-md transition-all text-center">
+                Start Free Assessment
+              </Link>
+              <Link href="/about" className="border border-white hover:bg-white hover:text-black text-white font-bold py-3 px-8 rounded-md transition-all text-center">
+                Learn More
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      {/* Features Section */}
+      <section className="py-20 px-6 bg-gray-900">
+        <div className="container mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">How OpsPartner.ai Works</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our platform combines AI automation with human expertise to deliver
+              operations excellence that scales with your business.
+            </p>
+          </motion.div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Assess",
+                description: "We analyze your current infrastructure, workflows, and pain points to identify optimization opportunities.",
+                icon: "🔍",
+                delay: 0
+              },
+              {
+                title: "Implement",
+                description: "Our AI-powered platform and DevOps experts deploy tailored solutions that integrate seamlessly with your tech stack.",
+                icon: "🚀",
+                delay: 0.2
+              },
+              {
+                title: "Optimize",
+                description: "Continuous monitoring and machine learning ensure your operations keep improving as your business evolves.",
+                icon: "📈",
+                delay: 0.4
+              }
+            ].map((feature, index) => (
+              <motion.div 
+                key={index}
+                className="bg-gray-800 rounded-lg p-8 shadow-lg"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: feature.delay }}
+                viewport={{ once: true }}
+              >
+                <div className="text-5xl mb-6">{feature.icon}</div>
+                <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* Benefits Section */}
+      <section className="py-20 px-6">
+        <div className="container mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Organizations Choose Us</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Join hundreds of companies that have transformed their operations with OpsPartner.ai
+            </p>
+          </motion.div>
+          
+          <div className="grid md:grid-cols-2 gap-10">
+            {[
+              {
+                title: "50% Reduction in Operational Costs",
+                description: "Our AI automation eliminates manual tasks and optimizes resource utilization, cutting infrastructure costs significantly.",
+                icon: "💰"
+              },
+              {
+                title: "3x Faster Deployment Cycles",
+                description: "Streamlined CI/CD pipelines and automated testing accelerate your release cycles without compromising quality.",
+                icon: "⚡"
+              },
+              {
+                title: "99.99% Uptime Guarantee",
+                description: "Proactive monitoring and self-healing infrastructure ensure maximum reliability for your critical systems.",
+                icon: "🛡️"
+              },
+              {
+                title: "Seamless Scalability",
+                description: "Dynamic resource allocation and intelligent load balancing help your infrastructure grow with your business.",
+                icon: "📊"
+              }
+            ].map((benefit, index) => (
+              <motion.div 
+                key={index}
+                className="flex gap-6"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-4xl">{benefit.icon}</div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">{benefit.title}</h3>
+                  <p className="text-gray-300">{benefit.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* Testimonials Section */}
+      <section className="py-20 px-6 bg-gray-900">
+        <div className="container mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Hear from organizations that have transformed their operations with OpsPartner.ai
+            </p>
+          </motion.div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              {
+                quote: "OpsPartner.ai revolutionized how we manage our cloud infrastructure. We've cut costs by 40% while handling 3x the traffic.",
+                author: "Sarah Chen",
+                position: "CTO, TechNova",
+                image: "/images/testimonial-1.jpg"
+              },
+              {
+                quote: "The combination of AI automation and expert guidance helped us modernize our legacy systems without disrupting operations.",
+                author: "Marcus Johnson",
+                position: "VP of Engineering, DataFlow",
+                image: "/images/testimonial-2.jpg"
+              }
+            ].map((testimonial, index) => (
+              <motion.div 
+                key={index}
+                className="bg-gray-800 rounded-lg p-8 shadow-lg"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                viewport={{ once: true }}
+              >
+                <div className="flex flex-col h-full">
+                  <p className="text-xl italic mb-6 flex-grow">"{testimonial.quote}"</p>
+                  <div className="flex items-center">
+                    <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
+                      <Image 
+                        src={testimonial.image} 
+                        alt={testimonial.author} 
+                        fill 
+                        className="object-cover"
+                      />
+                    </div>
+                    <div>
+                      <div className="font-bold">{testimonial.author}</div>
+                      <div className="text-gray-400">{testimonial.position}</div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* CTA Section */}
+      <section className="py-24 px-6">
+        <div className="container mx-auto">
+          <motion.div 
+            className="text-center max-w-3xl mx-auto"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Operations?</h2>
+            <p className="text-xl text-gray-300 mb-10">
+              Take the first step with our free assessment. Get personalized insights and recommendations for your unique infrastructure.
+            </p>
+            <Link href="/assessment" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-10 rounded-md text-xl transition-all inline-block">
+              Start Free Assessment
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+      
+      <Footer />
+    </main>
   );
 }
