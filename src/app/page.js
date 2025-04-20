@@ -181,13 +181,13 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
-                quote: "OpsPartner.ai revolutionized how we manage our cloud infrastructure. We've cut costs by 40% while handling 3x the traffic.",
+                quote: `OpsPartner.ai revolutionized how we manage our cloud infrastructure. We've cut costs by 40% while handling 3x the traffic.`,
                 author: "Sarah Chen",
                 position: "CTO, TechNova",
                 image: "/images/testimonial-1.jpg"
               },
               {
-                quote: "The combination of AI automation and expert guidance helped us modernize our legacy systems without disrupting operations.",
+                quote: `The combination of AI automation and expert guidance helped us modernize our legacy systems without disrupting operations.`,
                 author: "Marcus Johnson",
                 position: "VP of Engineering, DataFlow",
                 image: "/images/testimonial-2.jpg"
@@ -202,7 +202,7 @@ export default function Home() {
                 viewport={{ once: true }}
               >
                 <div className="flex flex-col h-full">
-                  <p className="text-xl italic mb-6 flex-grow">"{testimonial.quote}"</p>
+                  <p className="text-xl italic mb-6 flex-grow">{`"${testimonial.quote}"`}</p>
                   <div className="flex items-center">
                     <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
                       <Image 
