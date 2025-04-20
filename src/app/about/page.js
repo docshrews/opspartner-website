@@ -19,7 +19,7 @@ export default function About() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
                     >
-                        About OpsPartner.ai
+                        Meet OpsPartner.ai
                     </motion.h1>
                     <motion.p 
                         className="text-xl text-gray-300 max-w-3xl mx-auto"
@@ -27,7 +27,7 @@ export default function About() {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
                     >
-                        Revolutionizing DevOps with AI-powered automation and expertise.
+                        Your AI-powered sidekick for smarter, smoother, grind-free ops.
                     </motion.p>
                 </div>
                 
@@ -38,15 +38,15 @@ export default function About() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.7 }}
                     >
-                        <h2 className="text-3xl font-bold mb-6">Our Story</h2>
+                        <h2 className="text-3xl font-bold mb-6">Why We Built OpsPartner.ai</h2>
                         <p className="text-gray-300 mb-4">
-                            OpsPartner.ai was founded by a team of DevOps veterans who saw a critical gap in how organizations manage their operations infrastructure.
+                            We’ve been in the trenches—spending too much time putting out fires, duct-taping tools together, and scaling chaos instead of clarity.
                         </p>
                         <p className="text-gray-300 mb-4">
-                            After years of helping companies of all sizes navigate the complex world of cloud operations, we realized that even with amazing tools, teams still struggled with implementation, maintenance, and scaling their infrastructure.
+                            OpsPartner.ai was born to flip the script. We combine automation, AI, and systems thinking to give founders and teams their time back—without hiring a full ops department.
                         </p>
                         <p className="text-gray-300">
-                            We built OpsPartner.ai to be the missing link - combining cutting-edge AI with human expertise to deliver operations excellence that grows with your business.
+                            It’s not about replacing people. It’s about augmenting humans with tech that acts like a partner, not just a platform.
                         </p>
                     </motion.div>
                     <motion.div
@@ -74,7 +74,7 @@ export default function About() {
                 >
                     <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
                     <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                        To democratize operations excellence by making enterprise-grade DevOps accessible to companies of all sizes through the power of AI-assisted automation and expert guidance.
+                        To make operations effortless—using AI and automation to streamline your stack, free up your focus, and eliminate grind from the growth equation.
                     </p>
                 </motion.div>
                 
@@ -87,25 +87,25 @@ export default function About() {
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
                     >
-                        Why Choose OpsPartner.ai
+                        Built for Founders Who Hate Ops
                     </motion.h2>
                     
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
                             {
-                                title: "AI-Powered Efficiency",
-                                description: "Our AI platform continuously learns from your operations, automating routine tasks and providing intelligent insights for optimization.",
-                                icon: "🤖"
+                                title: "AI That Gets It",
+                                description: "Our tools don’t just automate—they adapt. Think of it like having an ops brain that learns your systems and scales with you.",
+                                icon: "🧠"
                             },
                             {
-                                title: "Human Expertise",
-                                description: "Get access to seasoned DevOps professionals who understand both the technical and business aspects of your operations.",
-                                icon: "👨‍💻"
+                                title: "Humans in the Loop",
+                                description: "We're not just pushing buttons. You get real experts who act like part of your team—because tech alone won’t get you there.",
+                                icon: "🤝"
                             },
                             {
-                                title: "Customized Solutions",
-                                description: "Every business is unique. Our approach adapts to your specific needs, technologies, and growth trajectory.",
-                                icon: "🔧"
+                                title: "Custom by Default",
+                                description: "We meet you where you are—your stack, your tools, your pace. This isn’t one-size-fits-all automation. It’s ops with intention.",
+                                icon: "🛠️"
                             }
                         ].map((item, index) => (
                             <motion.div 
@@ -132,17 +132,4 @@ export default function About() {
                     transition={{ duration: 0.7 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Operations?</h2>
-                    <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                        Take the first step toward operations excellence with our free assessment.
-                    </p>
-                    <Link href="/assessment" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all">
-                        Start Free Assessment
-                    </Link>
-                </motion.div>
-            </section>
-            
-            <Footer />
-        </main>
-    );
-}
+                    <h2 className="text-3xl font-bold mb-
