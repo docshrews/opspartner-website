@@ -150,7 +150,7 @@ export default function AboutPage() {
                     <h2 className="text-3xl font-bold mb-6 text-center">The Team</h2>
                     <div className="grid md:grid-cols-2 gap-8">
                         <div className="bg-zinc-900 p-6 rounded-2xl shadow-lg text-center">
-                            <h3 className="text-xl font-semibold mb-2">Jason Guerrette</h3>
+                            <h3 className="text-xl font-semibold mb-2">Jason Shrewsbury</h3>
                             <p className="text-gray-400 italic mb-2">Founder, Systems Whisperer</p>
                             <p className="text-gray-300 text-sm">
                                 Builder, fixer, automator. Jason blends ops insight with tech execution. Background in startups, scaleups, and setting things on fire (metaphorically).

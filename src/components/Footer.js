@@ -89,17 +89,17 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold text-white mb-4">Contact Us</h3>
             <p className="mb-2">
-              123 DevOps Lane<br />
-              San Francisco, CA 94107
+              Po Box 7<br />
+              Saint Albans, ME 04971
             </p>
             <p className="mb-2">
-              <a href="mailto:info@opspartner.ai" className="hover:text-white transition-colors">
-                info@opspartner.ai
+              <a href="mailto:jason@opspartner.ai" className="hover:text-white transition-colors">
+                jason@opspartner.ai
               </a>
             </p>
             <p>
-              <a href="tel:+1-555-123-4567" className="hover:text-white transition-colors">
-                (555) 123-4567
+              <a href="tel:+1-860-373-0040" className="hover:text-white transition-colors">
+                (860) 373-0040
               </a>
             </p>
           </div>
