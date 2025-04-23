@@ -1179,11 +1179,10 @@ function AssessmentForm() {
             </div>
             
             <p className="text-gray-400 mb-6">
-                If you have any questions in the meantime, feel free to email us at <a href="mailto:hello@opspartner.ai" className="text-blue-400 hover:underline">hello@opspartner.ai</a>
+                If you have any questions in the meantime, feel free to email us at <Link href="mailto:jason@opspartner.ai" className="text-blue-400 hover:underline">hello@opspartner.ai</Link>
             </p>
             
-            <a 
-                href="/"
+            <a href="/"
                 className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-md transition-all"
             >
                 Return to Homepage
