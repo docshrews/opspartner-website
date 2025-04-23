@@ -1182,11 +1182,11 @@ function AssessmentForm() {
                 If you have any questions in the meantime, feel free to email us at <Link href="mailto:jason@opspartner.ai" className="text-blue-400 hover:underline">hello@opspartner.ai</Link>
             </p>
             
-            <a href="/"
+            <Link href="/"
                 className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-md transition-all"
             >
                 Return to Homepage
-            </a>
+            </Link>
         </motion.div>
     ];
     
