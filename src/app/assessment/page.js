@@ -322,6 +322,40 @@ function AssessmentForm() {
         //     // Handle error
         // });
         
+        const handleSubmit = async (e) => {
+            e.preventDefault();
+          
+            if (!validateStep(step)) return;
+          
+            const payload = {
+              ...formData,
+              bottlenecks: formData.bottlenecks.join(', '),
+              tools: formData.tools.join(', ')
+            };
+          
+            try {
+              const response = await fetch('/api/submit-assessment', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
+              });
+          
+              if (!response.ok) {
+                throw new Error(`API error: ${response.status}`);
+              }
+          
+              const result = await response.json();
+              console.log('Airtable Response:', result);
+              setStep(step + 1);
+            } catch (err) {
+              console.error('Submit Error:', err);
+              alert('Something went wrong submitting your assessment. Please try again later.');
+            }
+          };
+          
+
         // For now, just move to the thank you step
         setStep(step + 1);
     };
